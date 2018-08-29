@@ -1,11 +1,14 @@
-.title { font-weight: 400; font-family: "Comfortaa", cursive; line-height: 0.1rem; letter-spacing: .2rem; }
+.title { font-weight: 400; font-family: "Comfortaa", cursive; font-size: 2.5rem; line-height: 0.1rem; letter-spacing: .2rem; }
 .right { text-align: right; }
 .justify { text-align: justify; }
 .center { text-align: center; }
 .white { padding-top: 1.5em; padding-bottom: 3rem; color: #333; }
 .margin {margin: 3.5rem; }
 .black { background-color: #FE4365; color: #FFFEE4; padding: 1.5em; }
+.logo { width: 150px; }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
+.title { font-weight: 400; font-family: "Comfortaa", cursive; line-height: 0.1rem; font-size: 3.6rem; letter-spacing: .2rem; }
+.logo { width: 200px; }
 .black { background-color: #FE4365; color: #FFFEE4; padding: 3.5em;  }
 }
