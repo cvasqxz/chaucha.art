@@ -126,8 +126,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Questrial", sans-serif;
-  color: #181818;
-  background-color: #fff;
+  color: #2c3539;
+  background-color: #ffefff;
  }
 
 
@@ -305,7 +305,7 @@ ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
 li {
-  margin-bottom: 1rem; }
+  margin-bottom: 0.3rem; }
 
 
 /* Code
@@ -313,7 +313,7 @@ li {
 code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
-  font-size: 90%;
+  font-size: 80%;
   white-space: nowrap;
   background: #F1F1F1;
   border: 1px solid #E1E1E1;
