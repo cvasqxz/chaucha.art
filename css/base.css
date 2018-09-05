@@ -10,3 +10,25 @@
 
 .conejo { width: 70%; }
 @media (min-width: 550px) { .conejo { width: 320px; } }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -2rem;
+}
+.footer,
+.push {
+  font-family: "Source Code Pro", monospace;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  color: #666;
+}
