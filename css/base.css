@@ -1,13 +1,13 @@
 .header { padding: 2.5rem; }
-.content { padding-top: 6rem; padding-bottom: 6rem; }
+.content { padding-top: 5rem; padding-bottom: 5rem; }
 .center {text-align: center;}
 
 .header-title {
   font-family: 'Comfortaa', cursive;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   letter-spacing: .2rem;
   font-weight: 600;
-  color: #434b49; }
+  color: #333; }
 
-.conejo { font-size: 20rem; text-decoration: none }
+.conejo { font-size: 25rem; text-decoration: none }
 .conejo:hover { text-decoration: none; }
