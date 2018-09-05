@@ -9,5 +9,5 @@
   font-weight: 600;
   color: #434b49; }
 
-.conejo { width: 85%; }
-@media (min-width: 550px) { .conejo { width: 400px; } }
+.conejo { font-size: 20rem; text-decoration: none }
+.conejo:hover { text-decoration: none; }
