@@ -8,5 +8,5 @@
   letter-spacing: .2rem;
   font-weight: 600; }
 
-.conejo { width: 85%; }
-@media (min-width: 550px) { .conejo { width: 400px; } }
+.conejo { width: 70%; }
+@media (min-width: 550px) { .conejo { width: 320px; } }
