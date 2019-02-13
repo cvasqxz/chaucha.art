@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>GENESIS</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Raleway');
+    body { font-family: 'Share Tech Mono', monospace; }
+    .genesis { margin: 0; letter-spacing: 2px; font-size: 2.25em; text-transform: uppercase; }
+    .highlight:hover { background-color:#FFFF00; }
+    .info { font-family: "Raleway", sans-serif; font-size: 1.5em; text-align: center; }
+    .break {  word-wrap: break-word; }
+    .container { padding-top: 5em; padding-left: 3em; padding-right: 3em; }
+    p { padding-bottom: 1em; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <p class="genesis break">
+    <span class="highlight" id="magic">f9beb4d9</span><span class="highlight" id="blocksize">1d010000</span><span class="highlight" id="blockver">01000000</span><span class="highlight" id="prevblockhash">0000000000000000000000000000000000000000000000000000000000000000</span><span class="highlight" id="merkleroot">3ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a</span><span class="highlight" id="timestamp">29ab5f49</span><span class="highlight" id="bits">ffff001d</span><span class="highlight" id="nonce">1dac2b7c</span><span class="highlight" id="txcount">01</span><span class="highlight" id="txver">01000000</span><span class="highlight" id="vin">01</span><span class="highlight" id="utxo">0000000000000000000000000000000000000000000000000000000000000000ffffffff</span><span class="highlight" id="lensigscript">4d</span><span class="highlight" id="coinbase">04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73</span><span class="highlight" id="sequence">ffffffff</span><span class="highlight" id="vout">01</span><span class="highlight" id="satoshis">00f2052a01000000</span><span class="highlight" id="script">434104678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5fac</span><span class="highlight" id="locktime">00000000</span>
+    </p>
+    <p class="info"></p>
+    </div>
+
+    <script type="text/javascript">
+        $('#magic').mouseover(function() { $('.info').text("Magic Number, 4 bytes elegidos para definir el inicio de un bloque en el Blockchain de Bitcoin"); });
+        $('#blocksize').mouseover(function() { $('.info').text("Tamaño de bloque de 285 bytes"); });
+        $('#blockver').mouseover(function() { $('.info').text("Versión de bloque"); });
+        $('#prevblockhash').mouseover(function() { $('.info').text("Hash del bloque anterior"); });
+        $('#merkleroot').mouseover(function() { $('.info').text("Raiz de Merkle, que en este caso es igual al Transaction ID de la única transacción almacenada en este bloque"); });
+        $('#timestamp').mouseover(function() { $('.info').text("Fecha de creación del bloque, Sabado 3 de Enero del año 2009 a las 18:15:05 (GMT)"); });
+        $('#bits').mouseover(function() { $('.info').text("Bits, representación compacta de la dificultad para minar este bloque"); });
+        $('#nonce').mouseover(function() { $('.info').text("Se tuvieron que calcular 2,083,236,893 Hashes para generar este bloque"); });
+        $('#txcount').mouseover(function() { $('.info').text("Existe solo 1 transacción almacenada dentro del bloque"); });
+        $('#txver').mouseover(function() { $('.info').text("Versión de la transacción"); });
+        $('#vin').mouseover(function() { $('.info').text("Esta transacción contiene solo 1 entrada"); });
+        $('#utxo').mouseover(function() { $('.info').text("Unspent Transaction Output (UTXO), que en esta transacción es un valor nulo"); });
+        $('#lensigscript').mouseover(function() { $('.info').text("Largo del coinbase"); });
+        $('#coinbase').mouseover(function() { $('.info').text("«The Times 03/Jan/2009 Chancellor on brink of second bailout for banks»"); });
+        $('#sequence').mouseover(function() { $('.info').text("Esta transacción se consideró finalizada al tener este Secuence Number"); });
+        $('#vout').mouseover(function() { $('.info').text("Esta transacción contiene solo 1 output"); });
+        $('#satoshis').mouseover(function() { $('.info').text("Generación de 5,000,000,000 Satoshis (50 BTC)"); });
+        $('#script').mouseover(function() { $('.info').text("Script que entrega el dominio de estos 50 BTC a la dirección 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"); });
+        $('#locktime').mouseover(function() { $('.info').text("Esta transacción se procesó automáticamente en la red al tener un LockTime nulo"); });
+        $('.highlight').mouseout(function() { $('.info').text(""); });
+    </script>
+  </body>
+</html>
