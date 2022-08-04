@@ -28,16 +28,8 @@
 					<img id="preview" src="1.png" class="image">
 				</div>
 				<div class="column px-4 pt-6">
-					<div class="content" id="balance" hidden="true">
-						<h3>Metamask Info</h3>
-						<ul>
-							<li><b>Address:</b> <span class="is-family-monospace" id="metamaskAddress"></span></li>
-							<li><b>Balance:</b> <span class="is-family-monospace" id="metamaskBalance"></span></li>
-						</ul>
-						<button class="button is-black" disabled="true" id="getAbasho">Habilitar Metamask</button>
-					</div>
-					<div id="installMetamask">
-						<a href="https://metamask.io/" target="_blank" class="button is-black">Instalar Metamask</a>
+					<div>
+						<a href="#" class="button is-black">SOLD OUT</a>
 					</div>
 					<hr>
 					<div class="content">
@@ -63,61 +55,5 @@
 			</div>
 		</div>
 	</section>
-
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-
-	<script type="text/javascript">
-		var isMetamaskInstalled = false;
-		var accounts;
-
-		$(document).ready(function() {
-			if (typeof window.ethereum !== 'undefined') {
-				isMetamaskInstalled = true;
-				getAccounts();
-				$("#getAbasho").prop('disabled', false);
-				$("#getAbasho").text('Obtener Abasho');
-				$("#balance").prop('hidden', false);
-				$("#installMetamask").prop('hidden', true);
-			} else {
-				$("#balance").prop('hidden', true);
-				$("#installMetamask").prop('hidden', false);
-			}
-		});
-		
-		$("#getAbasho").bind("click", function () { getAbasho() });
-
-		ethereum.on('accountsChanged', function() { getAccounts() });
-
-		async function getAccounts() {
-			if (isMetamaskInstalled) {
-				accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-				const balances = await ethereum.request({ method: "eth_getBalance", params: [accounts[0], "latest"] });
-				$("#metamaskAddress").text(accounts[0].substr(0,6) + "..." + accounts[0].substr(36, 42));
-				$("#metamaskBalance").text(Number(parseInt(balances)/1e18).toFixed(11) + " Ξ");
-			}
-		};
-
-		async function getAbasho() {
-			if (isMetamaskInstalled) {
-				ethereum.request({
-					method: 'eth_sendTransaction',
-					params: [{
-						from: accounts[0],
-						to: '0xE9C79B33C3A06f5Ae7369599F5a1e2FF886e17F0',
-		        		data: '0x6059198300000000000000000000000000000000000000000000000000000000',
-						value: '0x00',
-					}]
-				})
-			}
-		};
-
-		var previewCounter = 1;
-
-		setInterval(function () {
-			$("#preview").attr("src", previewCounter++ + ".png");
-			if (previewCounter > 6) { previewCounter = 1; }
-		}, 2000);
-	</script>
-	
 </body>
 </html>
